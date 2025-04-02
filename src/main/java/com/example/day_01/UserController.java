@@ -6,10 +6,19 @@ import org.springframework.web.bind.annotation.*;
 public class UserController {
 
 	@GetMapping("/user/{id}")
-	public UserResponse getUserById(@PathVariable int id)  {
+	public UserResponse getUserById(@PathVariable("id") int userId) {
 
-		throw new UserNotFoundException(String.valueOf(id));
-//	return new UserResponse();
+		if (userId == 0) {
+			throw new UserNotFoundException(String.valueOf(userId));
+		}
+
+		UserResponse userResponse = new UserResponse();
+		userResponse.setId(userId);
+		userResponse.setFirst_Name("John");
+		userResponse.setAge(30);
+
+		return userResponse;
+
 	}
 
 }

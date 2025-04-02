@@ -1,17 +1,17 @@
 package com.example.day_01;
 
 public class UserResponse{
-    private String name;
+    private String first_name;
     private int id;
     private String email;
     private int age;
 
-    public void setName(String name){
-        this.name = name;
+    public void setFirst_Name(String name){
+        this.first_name = name;
     }
 
-    public String getName(){
-        return name;
+    public String getFirst_Name(){
+        return first_name;
     }
 
     public void setId(int id){
@@ -42,7 +42,7 @@ public class UserResponse{
     public String toString(){
         return
                 "UserResponse{" +
-                        "name = '" + name + '\'' +
+                        "name = '" + first_name + '\'' +
                         ",id = '" + id + '\'' +
                         ",email = '" + email + '\'' +
                         ",age = '" + age + '\'' +
